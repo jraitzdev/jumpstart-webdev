@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Submit a new book</h1>
+
+  <p>To submit a new book, please create a description below for your randomly mashed up book title, then press the "Submit" button.</p>
+
+  <h2>{{ title }}</h2>
+
+  <form action="/book" method="post">
+    <label for="form-title">Title:</label>
+    <input type="text" name="form-title" size="100" />
+    <br /><br />
+    <label for="form-cover-image">Cover Image URL:</label>
+    <input type="text" name="form-cover-image" size="100" />
+    <br /><br />
+    <label for="form-description">Description:</label>
+    <textarea name="form-description" rows="10" cols="50"></textarea>
+    <br /><br />
+    <label for="form-reason">Reason:</label>
+    <textarea name="form-reason" rows="10" cols="50"></textarea>
+    <br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your submitted book:</h1>
+
+  <h2>{{ book.title }}</h2>
+  <img src="{{ book.cover}}">
+  <h3>Submitted on {{ book.timestamp }}</h3>
+  <p>{{ book.description }}</p>
+  <p>{{ book.reason }}</p>
+
+  <br><br>
+
+  <a href="{{ url_for('books') }}">See all books</a>
+{% endblock %}
